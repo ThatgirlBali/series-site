@@ -5,7 +5,7 @@ const seriesList = [
     title: "4 Minutes",
     country: "Thailand",
     image: "images/4 Minutes.jpeg",
-    link: "4Minutes.html"
+    link: "seriespages/4minutes.html"
   },
   {
     title: "Bad Buddy",
