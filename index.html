@@ -27,14 +27,19 @@
     <div id="seriesGrid" class="grid-container"></div>
   </main>
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+ <script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
-    });
-  </script>
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  // Close menu after clicking a link
+  menu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => menu.classList.remove('open'))
+  );
+ </script>
 
   <script src="scripts/main.js"></script>
 </body>
