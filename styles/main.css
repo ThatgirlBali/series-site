@@ -1,4 +1,4 @@
-/* RESET + BASE */
+/* Reset + Base */
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +12,6 @@ body {
   padding: 20px;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-/* HEADER */
 header {
   padding-top: 90px;
   text-align: center;
@@ -37,7 +31,20 @@ header input {
   border-radius: 8px;
 }
 
-/* MENU STYLES */
+/* Menu button */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Menu bar */
 #menu {
   display: flex;
   justify-content: space-around;
@@ -49,29 +56,18 @@ header input {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 #menu a {
-  flex: 1;
-  text-align: center;
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  padding: 10px 5px;
+  padding: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 6px;
-  border-right: 1px solid #ccc;
-}
-
-#menu a:last-child {
-  border-right: none;
-}
-
-#menu a .icon {
-  font-size: 18px;
+  justify-content: center;
+  flex: 1;
 }
 
 #menu a.active {
@@ -80,55 +76,35 @@ header input {
 }
 
 #menu a:hover {
-  color: #007BFF;
   background-color: #e0e0e0;
-  cursor: pointer;
+  color: #007BFF;
 }
 
-/* HAMBURGER TOGGLE BUTTON (initially hidden) */
-#menu-toggle {
-  display: none;
-}
-
-/* MOBILE MENU STYLES */
+/* Mobile Styles */
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
-    position: fixed;
-    top: 12px;
-    right: 12px;
-    background: #fff;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    font-size: 20px;
-    z-index: 1100;
-    border-radius: 4px;
   }
 
   #menu {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 60px;
-    background-color: #f0f0f0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(-100%);
+    position: relative;
+    display: none;
   }
 
   #menu.open {
-    transform: translateY(0);
+    display: flex;
   }
 
   #menu a {
-    display: block;
     width: 100%;
-    padding: 15px 20px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+    padding-left: 20px;
+    border-top: 1px solid #ccc;
+    justify-content: flex-start;
   }
 }
+
 
 /* GRID STYLING */
 .grid-container {
