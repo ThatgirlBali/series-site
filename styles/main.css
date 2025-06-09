@@ -137,37 +137,48 @@ html, body {
   padding: 5px 10px;
 }
 
-/* Responsive for mobile */
+#menu-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  #menu {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    position: relative;
-  }
-  
-  #menu a {
-    flex-basis: 100%;
-    text-align: left;
-    padding-left: 20px;
-    border-top: 1px solid #ccc;
-    display: none; /* Hide links by default on mobile */
-  }
-  
-  #menu a.active {
-    border-bottom: none;
-    background-color: #e6f0ff;
-  }
-  
   #menu-toggle {
     display: block;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 20px;
+    z-index: 1100;
+    border-radius: 4px;
   }
-  
-  /* Show links when menu is open */
-  #menu.open a {
-    display: flex;
+
+  #menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 60px;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #menu.open {
+    transform: translateY(0);
+  }
+
+  #menu a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
   }
 }
 
