@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BL Series by Year</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header>
+    <h1>🌍 BL Series by Year 🌍</h1>
+  </header>
+  
+  <nav id="menu">
+    <a href="index.html"><span class="icon">🏠</span>HOME</a>
+    <a href="bycountry.html"><span class="icon">🌍</span>COUNTRY</a>
+    <a href="byyear.html" class="active"><span class="icon">📅</span>YEAR</a>
+    <a href="bypairings.html"><span class="icon">❤️‍🔥</span>PAIRING</a>
+    <a href="bygenre.html"><span class="icon">🎬</span>GENRE</a>
+
+    <!-- Hamburger icon for mobile -->
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <div class="year-filter-bar">
+     <label for="yearFilter">Filter by Year:</label>
+     <select id="yearFilter">\
+        <option value="All">All</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <!-- Add more countries as needed -->
+     </select>
+
+     <label for="searchInput" style="margin-left: 20px;">🔍 Search:</label>
+     <input type="text" id="searchInput" placeholder="Type a series title...">
+    </div>
+
+  <div id="seriesContainerYear"></div>
+
+  <div id="seriesGrid" class="grid-container"></div>
+
+  <script src="scripts/byyear.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My BL Series Collection</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header>
+    <h1>🌈 My BL Series 🌈</h1>
+    <input type="text" id="searchInput" placeholder="Search series..." />
+  </header>
+
+  <main>
+    <div id="seriesGrid" class="grid-container"></div>
+  </main>
+  
+  <nav id="menu">
+   <a href="index.html" class="active"><span class="icon">🏠</span>HOME</a>
+   <a href="bycountry.html"><span class="icon">🌍</span>COUNTRY</a>
+   <a href="byyear.html"><span class="icon">📅</span>YEAR</a>
+   <a href="bypairings.html"><span class="icon">❤️‍🔥</span>PAIRING</a>
+   <a href="bygenre.html"><span class="icon">🎬</span>GENRE</a>
+
+   <!-- Hamburger icon for mobile -->
+   <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
