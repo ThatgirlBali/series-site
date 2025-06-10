@@ -7,9 +7,8 @@
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-  <header>
-    <h1>🌍 BL Series by Year 🌍</h1>
-  </header>
+
+  <button id="menu-toggle" aria-label="Toggle menu">☰</button>
   
   <nav id="menu">
     <a href="index.html"><span class="icon">🏠</span>HOME</a>
@@ -17,10 +16,11 @@
     <a href="byyear.html" class="active"><span class="icon">📅</span>YEAR</a>
     <a href="bypairings.html"><span class="icon">❤️‍🔥</span>PAIRING</a>
     <a href="bygenre.html"><span class="icon">🎬</span>GENRE</a>
-
-    <!-- Hamburger icon for mobile -->
-    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
   </nav>
+
+  <header>
+    <h1>🌍 BL Series by Year 🌍</h1>
+  </header>
 
   <div class="year-filter-bar">
      <label for="yearFilter">Filter by Year:</label>
@@ -42,6 +42,20 @@
   <div id="seriesContainerYear"></div>
 
   <div id="seriesGrid" class="grid-container"></div>
+
+  <script>
+   const toggle = document.getElementById('menu-toggle');
+   const menu = document.getElementById('menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  // Close menu after clicking a link
+  menu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => menu.classList.remove('open'))
+  );
+ </script>
 
   <script src="scripts/byyear.js"></script>
 </body>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BL Pairs</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+  <nav id="menu">
+    <a href="index.html"><span class="icon">🏠</span>HOME</a>
+    <a href="bycountry.html"><span class="icon">🌍</span>COUNTRY</a>
+    <a href="byyear.html"><span class="icon">📅</span>YEAR</a>
+    <a href="bypairings.html" class="active"><span class="icon">❤️‍🔥</span>PAIRING</a>
+    <a href="bygenre.html"><span class="icon">🎬</span>GENRE</a>
+  </nav>
+
+  <header>
+    <h1>💖 Popular BL Pairs 💖</h1>
+    <p style="text-align: center;">Click on a pair to see the dramas they've starred in together.</p>
+  </header>
+
+  <div class="filter-bar">
+   <input type="text" id="pairSearchInput" placeholder="Search pair names..." />
+  </div>
+
+
+  <main class="grid-container" id="pairingGrid">
+    <!-- Example Pair Card -->
+    <div class="series-card">
+     <a href="pairpages/bilkinpp.html" class="series-card">
+     <img src="images/pairs/bilkinpp.jpeg" alt="Bilkin & PP">
+     <h3>Bilkin ✦ PP</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/brightwin.html" class="series-card">
+     <img src="images/pairs/bilkinpp.jpeg" alt="Bright & Win">
+     <h3>Bright ✦ Win</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/bounprem.html" class="series-card">
+     <img src="images/pairs/bounprem.jpeg" alt="Boun & Prem">
+     <h3>Boun ✦ Prem</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/bilkinpp.html" class="series-card">
+     <img src="images/pairs/bilkinpp.jpeg" alt="Bilkin & PP">
+     <h3>Bilkin ✦ PP</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/daouoffroad.html" class="series-card">
+     <img src="images/pairs/daouoffroad.jpeg" alt="Daou & Offroad">
+     <h3>Daou ✦ Offroad</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/firstkhaotung.html" class="series-card">
+     <img src="images/pairs/firstkhaotung.jpeg" alt="First & Khaotung">
+     <h3>First ✦ Khaotung</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/mileapo.html" class="series-card">
+     <img src="images/pairs/mileapo.jpeg" alt="Mile & Apo">
+     <h3>Mile ✦ Apo</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/Offgun.html" class="series-card">
+     <img src="images/pairs/Offgun.jpeg" alt="Off & Gun">
+     <h3>Off ✦ Gun</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/ohmnanon.html" class="series-card">
+     <img src="images/pairs/ohmnanon.jpeg" alt="Ohm & Nanon">
+     <h3>Ohm ✦ Nanon</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/smartboom.html" class="series-card">
+     <img src="images/pairs/smartboom.jpeg" alt="Smart & Boom">
+     <h3>Smart ✦ Boom</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/tutoryim.html" class="series-card">
+     <img src="images/pairs/tutoryim.jpeg" alt="Tutor & Yim">
+     <h3>Tutor ✦ Yim</h3>
+     </a>
+    </div>
+
+    <div class="series-card">
+     <a href="pairpages/zeenunuew.html" class="series-card">
+     <img src="images/pairs/zeenunuew.jpeg" alt="Zee & Nunew">
+     <h3>Zee ✦ Nunew</h3>
+     </a>
+    </div>
+
+
+
+
+
+    <!-- Add more pairs here -->
+  </main>
+
+ <script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  const searchInput = document.getElementById('pairSearchInput');
+  const pairCards = document.querySelectorAll('.series-card');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  menu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => menu.classList.remove('open'))
+  );
+
+  // 🔍 Filter pairings based on input
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    pairCards.forEach(card => {
+      const name = card.querySelector('h3').textContent.toLowerCase();
+      card.style.display = name.includes(query) ? 'block' : 'none';
+    });
+  });
+ </script>
+
+</body>
+</html>

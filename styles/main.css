@@ -103,7 +103,9 @@ header input {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px); /* glass blur */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
     display: none;
     flex-direction: column;
     padding-top: 100px; /* So it doesn't clash with header */
@@ -130,6 +132,13 @@ header input {
   }
 }
 
+/* Reset margins */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
 
 /* GRID STYLING */
 .grid-container {
@@ -153,6 +162,15 @@ header input {
   transform: translateY(20px);
   animation: fadeIn 0.5s ease forwards;
 }
+
+/* @keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/
+
 
 .series-card img {
   aspect-ratio: 2 / 3;
@@ -199,3 +217,24 @@ header input {
   border-radius: 6px;
   border: 1px solid #aaa;
 }
+
+/* BL PAIRINGS FILTER BARS */
+.filter-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#pairSearchInput {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.grid-container,
+#pairingGrid a {
+  text-decoration: none;
+}
+

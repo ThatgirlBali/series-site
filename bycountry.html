@@ -8,43 +8,55 @@
 </head>
 
 <body>
-    <header>
-     <h1>🌍 BL Series by Country 🌍</h1>
-    </header>
+  
+  <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+  
+  <nav id="menu">
+    <a href="index.html" class="active"><span class="icon">🏠</span>HOME</a>
+    <a href="bycountry.html"><span class="icon">🌍</span>COUNTRY</a>
+    <a href="byyear.html"><span class="icon">📅</span>YEAR</a>
+    <a href="bypairings.html"><span class="icon">❤️‍🔥</span>PAIRING</a>
+    <a href="bygenre.html"><span class="icon">🎬</span>GENRE</a>
+  </nav>
 
+  <header>
+    <h1>🌍 BL Series by Country 🌍</h1>
+  </header>
 
+  <div class="filter-bar">
+    <label for="countryFilter">Filter by Country:</label>
+    <select id="countryFilter">\
+      <option value="All">All</option>
+      <option value="Thailand">Thailand</option>
+      <option value="South Korea">South Korea</option>
+      <option value="Japan">Japan</option>
+      <option value="Taiwan">Taiwan</option>
+      <!-- Add more countries as needed -->
+    </select>
 
-    <nav id="menu">
-        <a href="index.html"><span class="icon">🏠</span>HOME</a>
-        <a href="bycountry.html" class="active"><span class="icon">🌍</span>COUNTRY</a>
-        <a href="byyear.html"><span class="icon">📅</span>YEAR</a>
-        <a href="bypairings.html"><span class="icon">❤️‍🔥</span>PAIRING</a>
-        <a href="bygenre.html"><span class="icon">🎬</span>GENRE</a>
-
-        <!-- Hamburger icon for mobile -->
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
-    </nav>
-
-    <div class="filter-bar">
-     <label for="countryFilter">Filter by Country:</label>
-     <select id="countryFilter">\
-        <option value="All">All</option>
-        <option value="Thailand">Thailand</option>
-        <option value="South Korea">South Korea</option>
-        <option value="Japan">Japan</option>
-        <option value="Taiwan">Taiwan</option>
-        <!-- Add more countries as needed -->
-     </select>
-
-     <label for="searchInput" style="margin-left: 20px;">🔍 Search:</label>
-     <input type="text" id="searchInput" placeholder="Type a series title...">
-    </div>
+    <label for="searchInput" style="margin-left: 20px;">🔍 Search:</label>
+    <input type="text" id="searchInput" placeholder="Type a series title...">
+  </div>
     
-    <div id="seriesContainer"></div>
+  <div id="seriesContainer"></div>
     
-    <div id="seriesGrid" class="grid-container"></div>
+  <div id="seriesGrid" class="grid-container"></div>
+
+  <script>
+   const toggle = document.getElementById('menu-toggle');
+   const menu = document.getElementById('menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  // Close menu after clicking a link
+  menu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => menu.classList.remove('open'))
+  );
+ </script>
     
-    <script src="scripts/bycountry.js"></script>
+  <script src="scripts/bycountry.js"></script>
 
   
 
