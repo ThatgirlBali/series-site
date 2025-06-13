@@ -238,3 +238,11 @@ html, body {
   text-decoration: none;
 }
 
+/* COUNTS */
+#seriesCount {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #555;
+}
