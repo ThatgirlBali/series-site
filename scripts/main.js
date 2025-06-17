@@ -1,7 +1,7 @@
 const seriesList = [
   ////////////// THAILAND \\\\\\\\\\\\
   {
-    title: "2gether",
+    title: "❤️ 2gether ❤️",
     year: 2020,
     country: "Thailand",
     image: "images/series/2gether.jpeg",
@@ -17,14 +17,14 @@ const seriesList = [
     link: "seriespages/(Still)2gether.html"
   },
   {
-    title: "2 Moons",
+    title: "☆ 2 Moons ☆",
     year: 2017,
     country: "Thailand",
     image: "images/series/2 Moons.jpeg",
     link: "seriespages/2Moons.html"
   },
   {
-    title: "2 Moons 2",
+    title: "♡ 2 Moons 2 ♡",
     year: 2017,
     country: "Thailand",
     image: "images/series/2Moons2.jpeg",
@@ -38,7 +38,7 @@ const seriesList = [
     link: "seriespages/2MoonsTheAmbassador.html"
   },
   {
-    title: "4 Minutes",
+    title: "⭐4 Minutes⭐",
     year: 2024,
     country: "Thailand",
     image: "images/series/4 Minutes.jpeg",
